@@ -24,20 +24,22 @@ int _printf(const char *format, ...)
 			{
 				case 'c':
 					_putchar(va_arg(args, int));
-					count++;
 					break;
 				case 's':
 					_puts(va_arg(args, char*));
 					/*count += _strlen(va_arg(args, char*));*/
-					count++;
 					break;
 				case '%':
 					_putchar('%');
-					count++;
 					break;
+				case 'd':
+					print_number(va_arg(args, int));
+					break;
+				case 'i':
+					print_number(va_arg(args, int));
+                                        break;
 				default:
 					_putchar(format[i]);
-					count++;
 					break;
 			}
 		}
