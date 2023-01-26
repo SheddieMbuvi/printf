@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '\0')
-			return ('\n');
+			return ('\0');
 		if (format[i] == '%')
 		{
 			i++;
