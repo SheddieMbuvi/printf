@@ -11,6 +11,7 @@
 int _printf(const char *format, ...)
 {
 	int count = 0, i = 0;
+	char *str;
 	va_list args;
 
 	if (!format || (format[0] == '%' && format[1] == '\0'))
@@ -28,8 +29,9 @@ int _printf(const char *format, ...)
 					count++;
 					break;
 				case 's':
-					_puts(va_arg(args, char*));
-					count++;
+					str = va_arg(args, char*);
+					_puts(str);
+					count += _strlen(str);
 					break;
 				case '%':
 					_putchar('%');
