@@ -42,10 +42,10 @@ int _printf(const char *format, ...)
 					print_number(va_arg(args, int));
 					count++;
 					break;
-				/*case 'b':
+				case 'b':
 					int_to_binary(va_arg(args, int));
 					count++;
-					break;*/
+					break;
 				default:
 					_putchar('%');
 					_putchar(format[i]);
