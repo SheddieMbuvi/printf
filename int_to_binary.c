@@ -6,7 +6,7 @@
  */
 void int_to_binary(int n) {
     if (n == 0) {
-        putchar('0');
+        _putchar('0');
         return;
     }
 
