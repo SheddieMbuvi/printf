@@ -10,7 +10,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int count = 0, i = 0;
+	int count = 0, i = 0, z;
 	char *str;
 	va_list args;
 
@@ -39,8 +39,8 @@ int _printf(const char *format, ...)
 					break;
 				case 'd':
 				case 'i':
-					print_number(va_arg(args, int));
-					count++;
+					print_number(va_arg(args, int), &z);
+					count += z;
 					break;
 				case 'b':
 					int_to_binary(va_arg(args, int));

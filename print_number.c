@@ -4,9 +4,9 @@
  * print_number - prints an integer
  * @n: param
  */
-void print_number(int n)
+void print_number(int n, int*z)
 {
-	unsigned int i, j, count;
+	unsigned int i, j, numbers = 0, count;
 
 	if (n < 0)
 	{
@@ -30,5 +30,7 @@ void print_number(int n)
 	for (; count >= 1; count /= 10)
 	{
 		_putchar(((i / count) % 10) + 48);
+		numbers++;
 	}
+	*z = numbers;
 }
