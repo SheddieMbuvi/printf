@@ -3,6 +3,7 @@
 /**
  * print_number - prints an integer
  * @n: param
+ * @z: count pointer
  */
 void print_number(int n, int*z)
 {
@@ -11,6 +12,7 @@ void print_number(int n, int*z)
 	if (n < 0)
 	{
 		_putchar(45);
+		numbers++;
 		i = n * -1;
 	}
 	else
