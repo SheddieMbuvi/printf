@@ -3,14 +3,16 @@
 /**
  * print_number - prints an integer
  * @n: param
+ * @z: count pointer
  */
-void print_number(int n)
+void print_number(int n, int*z)
 {
-	unsigned int i, j, count;
+	unsigned int i, j, numbers = 0, count;
 
 	if (n < 0)
 	{
 		_putchar(45);
+		numbers++;
 		i = n * -1;
 	}
 	else
@@ -30,5 +32,7 @@ void print_number(int n)
 	for (; count >= 1; count /= 10)
 	{
 		_putchar(((i / count) % 10) + 48);
+		numbers++;
 	}
+	*z = numbers;
 }
